@@ -60,7 +60,7 @@ module.exports = function (grunt) {
           livereload: '<%= connect.options.livereload %>'
         },
         files: [
-          '<%= yeoman.app %>/{,*/}*.html',
+          '<%= yeoman.app %>/**/*.html', // For using Modular Structure
           '.tmp/styles/{,*/}*.css',
           '<%= yeoman.app %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
         ]
@@ -82,8 +82,8 @@ module.exports = function (grunt) {
             return [
               connect.static('.tmp'),
               connect().use(
-                '/bower_components',
-                connect.static('./bower_components')
+                'app/bower_components',
+                connect.static('./app/bower_components')
               ),
               connect().use(
                 '/app/styles',
@@ -362,14 +362,14 @@ module.exports = function (grunt) {
             '.htaccess',
             '*.html',
             'images/{,*/}*.{webp}',
-            //'app_components/**/*.html',
-            //'bower_components/**/*',
+            'app_components/**/*.html',
+            'bower_components/**/*.css', // TODO: when Additional CSS from bower are set to minify, please remove it from here and also change their block @ index.html
             'styles/fonts/{,*/}*.*'
           ]
         }, {
           expand: true,
-          cwd: 'bower_components/bootstrap/dist',
-          src: 'fonts/*',
+          cwd: '<%= yeoman.app %>/bower_components/bootstrap/dist',
+          src: 'fonts/*.*',
           dest: '<%= yeoman.dist %>'
         }, {
           expand: true,
