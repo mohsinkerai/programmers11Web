@@ -7,7 +7,7 @@
  * # MainCtrl
  * Controller of the workspaceApp
  */
-angular.module('main',['main.routes'])
-  .controller('MainCtrl', function ($scope) {
+angular.module('home',['home.routes'])
+  .controller('HomeCtrl', function ($scope) {
     $scope.mainContent = 'Main Screen';
   });

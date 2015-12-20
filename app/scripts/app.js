@@ -10,8 +10,8 @@ angular
     'ngSanitize',
     'ngTouch',
     'ui.router',
-    'main'
+    'home'
   ])
   .config(function ($urlRouterProvider) {
-    $urlRouterProvider.otherwise("/main");
+    $urlRouterProvider.otherwise("/home");
   });
