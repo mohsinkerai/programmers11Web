@@ -252,3 +252,26 @@ footer {
 p.copyright {
     margin: 15px 0 0;
 }
+
+.navbar{
+  background-color: #333;
+  border-bottom-color: #111;
+  color: #fff;
+}
+
+.navbar-default .navbar-brand{
+  font-size: 20px;
+  color: #ffffff;
+}
+/*.navbar-default .navbar-nav > li > a*/
+.nav.navbar-nav.navbar-right > li > a {
+  color: #fff;
+}
+
+.navbar-default .navbar-brand:hover{
+  color: #ddd;
+}
+
+.nav.navbar-nav.navbar-right > li > a:hover {
+  color: #ddd;
+}
