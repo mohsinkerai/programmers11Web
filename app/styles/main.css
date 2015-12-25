@@ -261,7 +261,7 @@ p.copyright {
 
 .navbar-default .navbar-brand{
   font-size: 20px;
-  color: #ffffff;
+  color: #9ccc65;
 }
 /*.navbar-default .navbar-nav > li > a*/
 .nav.navbar-nav.navbar-right > li > a {
@@ -274,4 +274,35 @@ p.copyright {
 
 .nav.navbar-nav.navbar-right > li > a:hover {
   color: #ddd;
+}
+
+#intro {
+  min-width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  background-position: center center;
+  background-size: cover;
+}
+
+.AlphaBlack{
+  background-color:#bbb;
+  height: inherit;
+  width: 100%;
+  opacity: .2;
+  position: fixed;
+  left: 0;
+  top: 20;
+}
+
+hr{
+  color: black;
+  background-color: black;
+  border-color: black;
+  width: 50%;
+}
+
+#canvasDiv>canvas{
+  background-size:cover;
 }

@@ -13,5 +13,5 @@ angular
     'home'
   ])
   .config(function ($urlRouterProvider) {
-    $urlRouterProvider.otherwise("/home");
+    $urlRouterProvider.otherwise("/");
   });
