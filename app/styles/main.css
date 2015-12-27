@@ -456,3 +456,9 @@ div.row~hr{
   max-width: 100%;
   height: auto;
 }
+
+/* when hiding the picture */
+.ng-hide-add         { animation:2.5s fadeOut ease; }
+
+/* when showing the picture */
+.ng-hide-remove      { animation:2.5s fadeIn ease; }

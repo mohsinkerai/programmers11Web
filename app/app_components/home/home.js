@@ -12,7 +12,7 @@ angular.module('home',['home.routes'])
     $scope.mainContent = 'Main Screen';
 
     $scope.web = true;
-    $scope.mob = true;
+    $scope.app = true;
     $scope.site = true;
 
     var pattern = Trianglify({
