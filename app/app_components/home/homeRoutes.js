@@ -17,6 +17,8 @@ angular.module('home.routes',['ui.router']).config(function($stateProvider){
         "portfolio": {
           templateUrl: "app_components/portfolio/portfolio.html",
           controller: 'HomeCtrl'
+        }, "contact": {
+          templateUrl: "app_components/contact/contact.html"
         }
       },
       controller: 'HomeCtrl'
