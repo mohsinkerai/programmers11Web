@@ -61,6 +61,7 @@ module.exports = function (grunt) {
         },
         files: [
           '<%= yeoman.app %>/**/*.html', // For using Modular Structure
+          '<%= yeoman.app %>/**/*.js',
           '.tmp/styles/{,*/}*.css',
           '<%= yeoman.app %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
         ]
@@ -236,7 +237,7 @@ module.exports = function (grunt) {
 
     // Performs rewrites based on filerev and the useminPrepare configuration
     usemin: {
-      html: ['<%= yeoman.dist %>/{,*/}*.html'],
+      html: ['<%= yeoman.dist %>/**/*.html'], //{,*/}*
       css: ['<%= yeoman.dist %>/styles/{,*/}*.css'],
       js: ['<%= yeoman.dist %>/scripts/{,*/}*.js'],
       options: {
@@ -310,7 +311,7 @@ module.exports = function (grunt) {
         files: [{
           expand: true,
           cwd: '<%= yeoman.dist %>',
-          src: ['*.html'],
+          src: ['**/*.html'],
           dest: '<%= yeoman.dist %>'
         }]
       }
@@ -324,7 +325,7 @@ module.exports = function (grunt) {
           usemin: 'scripts/scripts.js'
         },
         cwd: '<%= yeoman.app %>',
-        src: 'views/{,*/}*.html',
+        src: '**/*.html', //views/{,*/}*.html
         dest: '.tmp/templateCache.js'
       }
     },

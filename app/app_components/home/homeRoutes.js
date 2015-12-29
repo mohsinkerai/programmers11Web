@@ -2,8 +2,25 @@
 
 angular.module('home.routes',['ui.router']).config(function($stateProvider){
   $stateProvider.state('home', {
-      url: "/home",
-      templateUrl: "app_components/home/home.html",
+      url: "/",
+      views: {
+        "home": {
+          templateUrl: "app_components/home/home.html",
+          controller: 'HomeCtrl'
+        },
+        "services": {
+          templateUrl: "app_components/services/services.html"
+        },
+        "aboutus": {
+          templateUrl: "app_components/aboutus/aboutus.html"
+        },
+        "portfolio": {
+          templateUrl: "app_components/portfolio/portfolio.html",
+          controller: 'HomeCtrl'
+        }, "contact": {
+          templateUrl: "app_components/contact/contact.html"
+        }
+      },
       controller: 'HomeCtrl'
     });
 });
